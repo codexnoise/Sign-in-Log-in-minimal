@@ -1,12 +1,14 @@
-import  mysql.connector
+import mysql.connector
+from decouple import config
+
 
 def conectar():
     database = mysql.connector.connect(
-    host = "localhost",
-    user = "root",
-    passwd = "",
-    database = "master_python",
-    port = 3306
+        host=config('MYSQL_HOST'),
+        user=config('MYSQL_USER'),
+        passwd=config('MYSQL_PASSWORD'),
+        database=config('MYSQL_DATABASE'),
+        port=config('MYSQL_PORT')
     )
-    cursor = database.cursor(buffered = True)
+    cursor = database.cursor(buffered=True)
     return [database, cursor]
