@@ -1,5 +1,5 @@
-# Polls Web App
-A simple system for login or sigin and CRUD notes.
+# BASIC SIGN IN / LOG IN
+A simple system for login or sigin and CRUD text notes.
 
 ## Tech Stack
 
